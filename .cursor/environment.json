@@ -1,0 +1,17 @@
+{
+  "name": "PrehistoricTuna GitHub Pages",
+  "install": "python3 -c \"import http.server; print('python3 http.server ready')\"",
+  "terminals": [
+    {
+      "name": "Site Server",
+      "command": "python3 -m http.server 8080 --bind 0.0.0.0",
+      "description": "Serves the published Hexo GitHub Pages site at http://127.0.0.1:8080/"
+    }
+  ],
+  "ports": [
+    {
+      "name": "GitHub Pages",
+      "port": 8080
+    }
+  ]
+}
