@@ -1,11 +1,12 @@
 {
   "name": "PrehistoricTuna GitHub Pages",
   "install": "python3 -c \"import http.server; print('python3 http.server ready')\"",
+  "start": "bash .cursor/start-site.sh",
   "terminals": [
     {
-      "name": "Site Server",
-      "command": "python3 -m http.server 8080 --bind 0.0.0.0",
-      "description": "Serves the published Hexo GitHub Pages site at http://127.0.0.1:8080/"
+      "name": "Site Server logs",
+      "command": "touch /tmp/site-server.log && tail -F /tmp/site-server.log",
+      "description": "Follows the static site server log. The server itself is started by the environment start script on port 8080."
     }
   ],
   "ports": [

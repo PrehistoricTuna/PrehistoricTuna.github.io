@@ -5,10 +5,11 @@ This repository is the published static site for [PrehistoricTuna.github.io](htt
 ## Cursor Cloud specific instructions
 
 - There is no `package.json`, test suite, or application server to install.
-- Serve the site with Python's built-in HTTP server:
+- Cloud Agent `start` runs `.cursor/start-site.sh`, which serves the site on port 8080 if it is not already running.
+- To serve the site yourself:
 
   ```bash
-  python3 -m http.server 8080 --bind 0.0.0.0
+  bash .cursor/start-site.sh
   ```
 
 - Open [http://127.0.0.1:8080/](http://127.0.0.1:8080/) for Home, `/archives/` for Archives, and `/2019/04/17/我的第一篇文章/` for the sample post.
